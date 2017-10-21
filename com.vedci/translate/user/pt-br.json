@@ -1,0 +1,13 @@
+{
+  "menu" : "Menu",
+  "profile" : "Perfil",
+  "message" : "Mensagem",
+  "laboratory" : "Laboratório",
+  "contact" : "Contato",
+  "deposit" : "Depósito",
+  "withdrawal" : "Saque",
+  "certificate" : "Certificado",
+  "sign-out" : "Sair",
+  "message-private" : "Mensagem privada",
+  "send" : "Enviar"
+}

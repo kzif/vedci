@@ -1,0 +1,57 @@
+<div class="ice-container">
+    <div class="uk-grid-small ice-welcome-container uk-grid-divider" uk-grid>
+        <div class="uk-width-1-3@m">
+            <form class="uk-form-stacked">
+
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-login">{{'username' | translate}}</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-login" type="text" placeholder="{{'username-placeholder' | translate}}">
+                    </div>
+                </div>
+
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-password">{{'password' | translate}}</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-password" type="password" placeholder="{{'password-placeholder' | translate}}">
+                    </div>
+                </div>
+
+                <div class="uk-margin">
+                   <a routerLink="/welcome/forgot-password">{{'forgot-password' | translate }}</a>
+                </div>
+            </form>
+        </div>
+        <div class="uk-width-2-3@m">
+            <img class="uk-align-center" src="../../../img/welcome/logo.svg">
+            <div class="uk-grid-small ice-welcome-container" uk-grid>
+                <div class="uk-width-1-3@l">
+                    <strong>{{'connect' | translate}}</strong>
+                    <p>{{'connect-text' | translate}}</p>
+                </div>
+                <div class="uk-width-1-3@l">
+                    <strong>{{'learn' | translate}}</strong>
+                    <p>{{'learn-text' | translate}}</p>
+                </div>
+                <div class="uk-width-1-3@l">
+                    <strong>{{'share' | translate}}</strong>
+                    <p>{{'share-text' | translate}}</p>
+                </div>
+            </div>
+
+            <hr class="uk-divider-icon ice-highlights-margin">
+
+            <div class="ice-highlights-margin">
+                {{'highlights' | translate}}
+
+                <div class="uk-grid-small ice-welcome-container" uk-grid>
+                    <div *ngFor="let image of getHighlight()" class="uk-width-1-5@s ice-highlights-img">
+                        <img [src]="image.img">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
