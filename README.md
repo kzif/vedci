@@ -1,1 +1,1 @@
-# vedci
+# Vedic
