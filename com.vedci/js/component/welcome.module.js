@@ -22,6 +22,9 @@ var translate_loader_factory_1 = require("../factory/translate-loader.factory");
 var register_confirmation_component_1 = require("./welcome/register-confirmation.component");
 var common_1 = require("@angular/common");
 var footer_module_1 = require("./footer.module");
+var http_interceptor_service_1 = require("../service/http-interceptor.service");
+var forms_1 = require("@angular/forms");
+var logout_component_1 = require("./welcome/logout.component");
 var WelcomeModule = /** @class */ (function () {
     function WelcomeModule(translate) {
         // this language will be used as a fallback when a translation isn't found in the current language
@@ -35,6 +38,7 @@ var WelcomeModule = /** @class */ (function () {
                 common_1.CommonModule,
                 http_1.HttpClientModule,
                 footer_module_1.FooterModule,
+                forms_1.FormsModule,
                 router_1.RouterModule.forChild(welcome_routes_1.WelcomeRoutes),
                 core_2.TranslateModule.forRoot({
                     loader: {
@@ -48,12 +52,16 @@ var WelcomeModule = /** @class */ (function () {
                     isolate: true
                 })
             ],
+            providers: [
+                { provide: http_1.HTTP_INTERCEPTORS, useClass: http_interceptor_service_1.HttpInterceptorService, multi: true }
+            ],
             declarations: [
                 welcome_template_1.WelcomeTemplate,
                 login_component_1.LoginComponent,
                 forgot_password_component_1.ForgotPasswordComponent,
                 register_confirmation_component_1.RegisterConfirmationComponent,
-                register_component_1.RegisterComponent
+                register_component_1.RegisterComponent,
+                logout_component_1.LogoutComponent
             ],
         }),
         __metadata("design:paramtypes", [core_2.TranslateService])

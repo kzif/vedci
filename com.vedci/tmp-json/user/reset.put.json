@@ -1,0 +1,10 @@
+{
+  "intercept": {
+  },
+  "body": {
+    "id": 1,
+    "firstName": "Ana",
+    "lastName": "Joaquina",
+    "image": ".././../../img/tmp/user-250/1.jpg"
+  }
+}
